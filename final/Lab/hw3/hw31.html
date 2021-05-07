@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <title>CahsRegister</title>
+  </head>
+  <script type="text/javascript">
+  // Input
+var cartForParty = {
+"banana" : 1.25,
+"handkerchief" : 0.99,
+"Tshirt" : 25.01,
+"apple"  0.60,
+"nalgene" : 10.34,
+"proteinShake" : 22.36
+};
+
+
+
+
+$(function() {
+  $("input:checkbox").on("change", function() {
+    var total = 0;
+    $("input[type=checkbox]:checked").each(function() {
+      total += shoppingItems[this.value];
+    })
+    $("#total").text(total.toFixed(2));
+  }).change();
+})
+// Output
+//cashRegister(cartForParty)); // 60.55
+
+
+  </script>
+  <body style="font-family:Arial">
+    <p> List of item purchased and prices: </p>
+    <table style="padding: 20px;">
+      <form action="cash-register.html" method="post">
+
+
+        <tr>
+            <td>Price of Banana:</td>
+            <td><input type="checkbox" value="banana" name="products[]"><br>
+        </tr>
+        <tr>
+            <td>Price of Bagel:</td>
+            <td><input type="checkbox" value="handkerchief" name="products[]"></td>
+        </tr>
+        <tr>
+            <td>Price of Cheese:</td>
+            <td><input type="checkbox" value="Tshirt" name="products[]"></td>
+        </tr>
+        <tr>
+            <td>Price of Apple:</td>
+            <td><input type="checkbox" value="apple" name="products[]"></td>
+        </tr>
+        <tr>
+            <td>Price of Nalgene:</td>
+            <td><input type="checkbox" value="nalgene" name="products[]"></td>
+        </tr>
+        <tr>
+            <td>Price of Protein Shake:</td>
+            <td><input type="checkbox" value"proteinShake" name="products[]"></td>
+        </tr>
+        </form>
+    </table>
+
+    <button type="button" name="yourOrder" onclick="getOrderTotal()">Submit</button>
+    <br>
+
+Total: $<span id="total"></span>
+
+
+
+
+  </body>
+</html>

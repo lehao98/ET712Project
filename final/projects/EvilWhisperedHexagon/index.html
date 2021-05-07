@@ -1,0 +1,101 @@
+
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width">
+		<title>Fortune Teller Program</title>
+	</head>
+  
+	<body>
+  
+		<style>
+  
+  body
+{
+	background-image:url(123.png);
+	background-size:100% 100%;
+    background-repeat: no-repeat;
+}
+  
+		</style>
+  
+		<p><h1 align="center">Fortune Teller</h1></p>
+    
+		<p align="center"> Fill the form and you will see your fortune </p>
+  
+		<table align="center">
+  			<tr>
+				<td>Number of Kids:</td>
+            	<td><input type="text"  id="numKids" value=""></td>
+			</tr>
+        	<tr>
+				<td>Partner:</td>        
+                <td><input type="text" id="partner"  value=""></td>
+         	</tr>
+         	<tr>
+         		<td>Location:</td>       
+                <td><input type="text" id="location" value=""></td>
+             </tr>
+             <tr>   
+				<td>Job Title:</td>      
+                <td><input type="text" id="job"      value=""></td>
+                </tr>
+                
+			 <td><button onclick="myFunction()">Try it</button></td>
+             
+		</table>
+		
+		<p id="demo"></p>
+		<p id="demo1"></p>
+		<p id="demo2"></p>
+        <p id="demo3"></p>
+        <p id="demo4"></p>
+        <p id="demo5"></p>
+        <p id="demo6"></p>
+        <p id="demo7"></p>
+        <p id="demo8"></p>
+
+		<script>
+			alert("You are able to findout your Future")
+			
+			function myFunction() {
+				
+			//document.getElementById("demo").innerHTML = "You will be a";
+				
+			  var a = document.getElementById("job").value;
+ 			 //document.getElementById("demo1").innerHTML = a;
+			 
+			// document.getElementById("demo2").innerHTML = "in";
+			 
+			var b = document.getElementById("location").value;
+ 			 //document.getElementById("demo3").innerHTML = b;
+			 
+			 //document.getElementById("demo4").innerHTML = "and married to";
+			 
+			  var c = document.getElementById("partner").value;
+ 			 //document.getElementById("demo5").innerHTML = c;
+			 
+			 //document.getElementById("demo6").innerHTML = "with";
+			 
+			  var d = document.getElementById("numKids").value;
+ 			 //document.getElementById("demo7").innerHTML = d;
+			 
+			 //document.getElementById("demo8").innerHTML = "kids.";
+			 
+			 alert("You will be a " + a + " in " + b + ", and married to " + c + " with " + d + " kids.");
+			 
+			 
+}
+
+		</script>
+        
+      
+        <p align="right">Made By</p>
+        <p align="right"> <em>Absar Khan</em></p>
+        <p align="right"> <em>Denisse Rivera</em></p>
+        <p align="right"> <em>Hasfa Ali Faria</em></p>
+        
+	</body>
+  
+</html>

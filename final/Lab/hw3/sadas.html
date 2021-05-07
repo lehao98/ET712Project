@@ -1,0 +1,38 @@
+<form>
+<div id="uk-form-checkbox">
+<input id="option-1" class="uk-checkbox-box" value="100" name="option 1"
+type="checkbox">
+<label for="option-1" >option 1</label>
+<input id="option-2" class="uk-checkbox-box" value="250" name="option 2"
+type="checkbox">
+<label for="option-2" >option 2</label>
+<input id="option-3" class="uk-checkbox-box" value="500" name="option 3"
+type="checkbox">
+<label for="option-3" >option 3</label>
+</div>
+</form>
+
+<div id="uk-form-submit" style="cursor:pointer;">
+<div id="submit" class="uk-submit-button">Calculate Total</div>
+</div>
+<div id="uk-total-price"></div>
+
+<script>
+var button = document.getElementById("submit");
+var result = document.getElementById("uk-total-price");
+
+button.addEventListener( "click" , function(){
+
+var options = document.getElementsByClassName('uk-checkbox-box');
+var calc = 0;
+var totalPrice = 19.5;
+
+ for (i = 0; i < options.length; i++) {
+  if (options[i].checked) {
+    calc = calc + parseInt( options[i].value );
+  }
+}
+result.innerHTML = calc + totalPrice;
+
+});
+</script>

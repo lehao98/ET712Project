@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <script type="text/javascript">
+  var shoppingItems = {
+    "Stainless Steel Cooking Pot": 29.99,
+    "Mini Stainless Steel Blender": 19.99,
+    "Kitchen Towel Set": 7.99,
+    "Large Tan Coffee Mug": 5.49,
+    "5 Round Dinner Plate Set": 5.99,
+    "Salt and Pepper Shaker Set": 1.99,
+    "Large Blue Broom": 3.98,
+    "Pink Soap Dish": 2.50,
+    "Silver Bathroom Trash Can": 6.99,
+    "Silk Black Bathroom Robe": 9.99,
+  };
+
+  const listOfCheckedItems = catalog =>
+    $("input:checkbox:checked").toArray().reduce((a, e) => a + catalog[e.value], 0)
+  ;
+
+  function getOrderTotal() {
+    console.log(listOfCheckedItems(shoppingItems));
+    document.write(listOfCheckedItems(shoppingItems));
+  }
+  </script>
+  <body>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <form action="cash-register.html" method="post">
+    <p >Department Store Items</p>
+    <input type="checkbox" name="products[]" value="Stainless Steel Cooking Pot">Stainless Steel Cooking Pot - $29.99<br>
+    <input type="checkbox" name="products[]" value="Mini Stainless Steel Blender">Mini Stainless Steel Blender - $19.99<br>
+    <input type="checkbox" name="products[]" value="Kitchen Towel Set">Kitchen Towel Set - $7.99<br>
+    <input type="checkbox" name="products[]" value="Large Tan Coffee Mug">Large Tan Coffee Mug - $5.49<br>
+    <input type="checkbox" name="products[]" value="5 Round Dinner Plate Set">5 Round Dinner Plate Set - $5.99<br>
+    <input type="checkbox" name="products[]" value="Salt and Pepper Shaker Set">Salt and Pepper Shaker Set - $1.99<br>
+    <input type="checkbox" name="products[]" value="Large Blue Broom">Large Blue Broom - $3.98<br>
+    <input type="checkbox" name="products[]" value="Pink Soap Dish">Pink Soap Dish - $2.5<br>
+    <input type="checkbox" name="products[]" value="Silver Bathroom Trash Can">Silver Bathroom Trash Can - $6.99<br>
+    <input type="checkbox" name="products[]" value="Silk Black Bathroom Robe">Silk Black Bathroom Robe - $9.99
+    <br/>
+    <br/>
+    <button type="button" name="yourOrder" onclick="getOrderTotal()">Submit</button>
+    <br/>
+    <br/>
+  </form>
+
+
+
+
+
+
+
+
+
+
+
+
+  </body>
+</html>

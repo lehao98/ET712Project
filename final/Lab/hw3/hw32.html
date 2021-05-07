@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Shopping cashier software</title>
+</head>
+<style type="text/css">
+    #list{
+        width:330px;
+        height:100px;
+    }
+</style>
+<script type="text/javascript">
+    var total = 0
+    function compute(){
+        var tempTotal = 0;
+        var price = document.getElementById('price').value
+        var count = document.getElementById('count').value
+        tempTotal += price * count
+                 document.getElementById('list').innerHTML += "Unit price:"+price+", Quantity: " + count + ", total: " + tempTotal.toFixed(2)
+        document.getElementById('list').innerHTML += "\n"
+        total += tempTotal
+        document.getElementById('show').innerHTML = total.toFixed(2)
+    }
+
+    function reset(){
+        document.getElementById('list').innerHTML = ""
+        total = 0
+        document.getElementById('show').innerHTML = total.toFixed(2)
+    }
+</script>
+<body>
+<div margin:0px auto>
+    <center>
+
+        <br>
+                 <label>Unit price:</label>
+        <input type="text" id="price" value="1.1">
+                 <button type="button" onclick="compute()">OK</button><br>
+                 <label>Number:</label>
+        <input type="text" id="count" value="20">
+                 <button type="button" onclick="reset()">Reset</button><br><br>
+        <textarea id="list" value="price" ></textarea><br>
+                 <label>Total:</label><label id = show></label>
+    </center>
+</div>
+</body>
+</html>

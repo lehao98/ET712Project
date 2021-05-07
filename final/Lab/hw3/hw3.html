@@ -1,0 +1,73 @@
+ <!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <title>CahsRegister</title>
+</head>
+<body style="font-family:Arial">
+  <h1>Cash Register</h1>
+
+
+      <p> List of item purchased and prices: </p>
+      <table style="padding: 20px;">
+          <tr>
+              <td>Price of Banana:</td>
+              <td><input type="text" id="Banana" /></td>
+          </tr>
+          <tr>
+              <td>Price of Bagel:</td>
+              <td><input type="text" id="Bagel" /></td>
+          </tr>
+          <tr>
+              <td>Price of Cheese:</td>
+              <td><input type="text" id="Cheese" /></td>
+          </tr>
+          <tr>
+              <td>Price of Apple:</td>
+              <td><input type="text" id="Apple" /></td>
+          </tr>
+          <tr>
+              <td>Price of Milk:</td>
+              <td><input type="text" id="Milk" /></td>
+          </tr>
+          <tr>
+              <td>Price of PeanutButter:</td>
+              <td><input type="text" id="PeanutButter" /></td>
+          </tr>
+      </table>
+
+      <input type="button" id="getData" value="Total">
+
+      <br/><br/>
+
+
+      <div>
+          <p id='output'></p>
+      </div>
+      <script type="text/javascript">
+
+          $(document).ready(function () {
+
+              function getNum(s) {
+                  if(s == undefined || s == '') {
+                      return 0;
+                  }
+                  return parseInt(s)
+              }
+
+              $('#getData').click(function () {
+                  var total = 0;
+                  console.log($('#Banana').val());
+                  total += getNum($('#Banana').val())
+                  total += getNum($('#Bagel').val())
+                  total += getNum($('#Cheese').val())
+                  total += getNum($('#Apple').val())
+                  total += getNum($('#Milk').val())
+                  total += getNum($('#PeanutButter').val());
+                  console.log(total);
+                  $('#output').text(total);
+              });
+          });
+      </script>
+  </body>
+</html>

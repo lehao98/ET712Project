@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+  <meta charset="utf-8">
+  <title>GroupWorkProjectAssignment3</title>
+</head>
+<link rel="stylesheet" href="hw35.css">
+<body>
+<script>
+
+const tax = .06;
+
+function calculate() {
+var cartForParty = {
+  banana: 1.25,
+  handkerchief: .99,
+  tShirt: 25.01,
+  apple: 0.60,
+  nalgene: 10.34,
+  proteinShake: 22.36
+};
+
+cashRegister(cartForParty);
+function cashRegister(cashName) {
+var banana= document.getElementById("Bananas").value;
+var handkerchief= document.getElementById("Handkerchief").value;
+var tShirt= document.getElementById("tShirt").value;
+var apple= document.getElementById("Apple").value;
+var nalgene= document.getElementById("nalgene").value;
+var proteinShake= document.getElementById("proteinShake").value;
+
+var sum = 0;
+for (var key in cashName) {
+sum += Number(cashName[key]);
+}
+
+var cashPrice = sum * tax;
+for (var i=0; i<cartForParty.length; i++){
+  var cartt=cartForParty[i];
+}
+alert("Total Money is $" + sum + " and original price without tax is $" + ((sum-2.55).toFixed(2)) + " .");
+}
+}
+function purchase() {
+  document.getElementById("pc").innerHTML = "You Successfully purchased your items and have a nice day!";
+}
+</script>
+
+<body>
+
+<table>
+
+<p class="a">Purchasing items from your shopping cart</p>
+
+<tr>
+
+<td>Bananas:</td>
+
+<td><input type="text" id="Bananas" value="$1.25"></td>
+
+</tr>
+
+<tr>
+
+<td>Handkerchief:</td>
+
+<td><input type="text" id="Handkerchief" value="$0.99"></td>
+
+</tr>
+
+<tr>
+
+<td>Tshirt:</td>
+
+<td><input type="text" id="tShirt" value="$25.01"></td>
+
+</tr>
+
+<tr>
+
+<td>Apple:</td>
+
+<td><input type="text" id="Apple" value="$0.60"></td>
+
+</tr>
+
+<tr>
+
+<td>Nalgene:</td>
+
+<td><input type="text" id="nalgene" value="$10.34"></td>
+
+</tr>
+
+<tr>
+
+<td>Protein Shake:</td>
+<td><input type="text" id="proteinShake" value="$22.36"></td>
+
+
+
+</tr>
+<tr>
+
+<td>With Taxes:</td>
+<td><input type="text" id="proteinShake" value="$3.63 / $0.6 for each"></td>
+
+
+
+</tr>
+<tr>
+
+<td><button class="text" onclick="calculate()">View Total Prices</button></td>
+<td><button onclick="purchase()">Purchase</button></td>
+</tr>
+
+</table>
+<h1 id="pc">Don't Forget to pay!! Ok???</h1>
+<br><br><br><br><br><br>
+<h1>GroupWork Project By:<br>Jason, Muhammed B, Ravinder </h1>
+
+</body>
+</html>

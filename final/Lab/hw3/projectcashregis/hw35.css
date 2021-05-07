@@ -1,0 +1,14 @@
+table{
+padding: auto;
+margin: auto;
+border: 0.1px black solid;
+background-image: url('https://cdn1.vectorstock.com/i/1000x1000/48/10/pop-art-woman-running-with-shopping-cart-vector-21824810.jpg');
+}
+.a{
+padding: 20px;
+text-align: center;
+}
+h1{
+text-align: center;
+
+}

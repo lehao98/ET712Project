@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+
+
+<form name="addressform">
+  Name:<br><input type="text" name="name" >
+   <input type="button" value="Click Me" onclick="window.alert('Hello! ' + document.addressform.name.value);"><br>
+  Phone: <br><input type="text" name="phone" >
+  <input type="button" value="Click Me"  onclick="window.alert('Are you sure your phone number is ' + document.addressform.phone.value + '?');"><br>
+  E-mail: <br><input type="text" name="email" >
+    <input type="button" value="Click Me"  onclick="window.alert('E-mail is not found as you typed ' + document.addressform.email.value + ', please enter a valid E-mail.');"><br>
+ </form>
+
+
+</body>
+</html>

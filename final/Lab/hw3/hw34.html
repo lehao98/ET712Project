@@ -1,0 +1,119 @@
+<html>
+
+<head>
+
+<script>
+
+const tax = .06;
+
+function calculate() {
+
+var cartForParty = {
+banana: 1.25,
+handkerchief: 0.99,
+tShirt: 25.01,
+apple: 0.60,
+nalgene: 10.34,
+proteinShake: 22.36
+};
+
+cashRegister(cartForParty);
+
+function cashRegister(cashRegister) {
+
+var bananas= document.getElementById("Bananas").value;
+
+var handkerchief= document.getElementById("Handkerchief").value;
+
+var tShirt= document.getElementById("tShirt").value;
+
+var apple= document.getElementById("Apple").value;
+
+var nalgene= document.getElementById("nalgene").value;
+
+var proteinShake= document.getElementById("proteinShake").value;
+
+var sum = 0;
+
+for (var key in cashRegister) {
+
+sum += Number(cashRegister[key]);
+
+}
+
+var totalTax = sum * tax;
+
+alert("Cart total is $" + sum.toFixed(2) + " plus $" + totalTax.toFixed(2) + " tax.");
+
+}
+
+}
+document.getElementById("demo").innerHTML="I started my job on " + cartForParty.banana + " . ";
+</script>
+
+<body>
+
+<table style="padding: 20px;">
+
+<p>Enter the number of items you wish to purchase</p>
+
+<tr>
+
+<td>Bananas:</td>
+
+<td><input type="number" id="Bananas" /></td>
+
+</tr>
+
+<tr>
+
+<td>Handkerchief:</td>
+
+<td><input type="number" id="Handkerchief" /></td>
+
+</tr>
+
+<tr>
+
+<td>Tshirt:</td>
+
+<td><input type="number" id="tShirt" /></td>
+
+</tr>
+
+<tr>
+
+<td>Apple:</td>
+
+<td><input type="number" id="Apple" /></td>
+
+</tr>
+
+<tr>
+
+<td>Nalgene:</td>
+
+<td><input type="number" id="nalgene" /></td>
+
+</tr>
+
+<tr>
+
+<td>Protein Shake:</td>
+
+<td><input type="number" id="proteinShake" /></td>
+
+</tr>
+
+<tr>
+
+<td><button class="button" onclick="calculate()">Calculate Total</button></td>
+
+</tr>
+
+</table>
+<p id="demo"></p>
+
+
+</body>
+</html>

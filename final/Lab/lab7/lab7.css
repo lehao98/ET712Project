@@ -1,0 +1,24 @@
+form{
+  border:inset;
+  margin:25%;
+  padding:20px;
+  color:blue;
+  font-family:cursive;
+  align-content: center;
+  content: icon;
+  text-align: left;
+}
+.att{
+  border:solid;
+  margin:5%;
+  padding:1px;
+  color:gray;
+  align-self: center;
+}
+.at{
+  border:solid black;;
+  margin:5%;
+  padding:1px;
+  color:white;
+  align-self: center;
+}
